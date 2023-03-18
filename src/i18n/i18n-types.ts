@@ -15,7 +15,7 @@ export type Translations = RootTranslation
 
 type RootTranslation = {
 	/**
-	 * W​e​l​c​o​m​e​ ​t​o​ ​S​v​e​l​t​e​K​i​t
+	 * 5​e​ ​C​h​a​r​a​c​t​e​r​ ​S​h​e​e​t
 	 */
 	HI: string
 	LOCALES: {
@@ -41,7 +41,7 @@ type RootTranslation = {
 
 export type TranslationFunctions = {
 	/**
-	 * Welcome to SvelteKit
+	 * 5e Character Sheet
 	 */
 	HI: () => LocalizedString
 	LOCALES: {

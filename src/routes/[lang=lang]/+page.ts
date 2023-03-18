@@ -13,6 +13,7 @@ export const load = (async ({ parent }) => {
 	const $LL = get(LL);
 	console.info($LL.log({ fileName: '+page.ts' }));
 	return {
-		title: $LL.HI()
+		title: $LL.HI(),
+		appVersion: 'v0.0.1'
 	};
 }) satisfies PageLoad;

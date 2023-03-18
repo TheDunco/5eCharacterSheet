@@ -4,6 +4,7 @@ import type { Actions } from './$types';
 
 export const load = (async ({ locals: { LL } }) => {
 	console.info(LL.log({ fileName: '+page.server.ts' }));
+	// TODO: get character data from the CMS
 }) satisfies PageServerLoad;
 
 export const actions: Actions = {

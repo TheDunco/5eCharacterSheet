@@ -11,7 +11,9 @@ declare namespace App {
 		locale: Locales;
 		LL: TranslationFunctions;
 	}
-	// interface PageData {}
+	interface PageData {
+		appVersion: string;
+	}
 	// interface Platform {}
 }
 

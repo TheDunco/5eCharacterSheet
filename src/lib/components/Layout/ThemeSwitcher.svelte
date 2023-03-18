@@ -55,7 +55,7 @@
 
 <button
 	on:click={toggleTheme}
-	class="theme-toggle rounded border border-neutral-200 bg-white p-1 text-neutral-900 hover:ring focus-visible:outline-none focus-visible:ring dark:border-neutral-600 dark:bg-neutral-900 dark:text-neutral-100"
+	class="theme-toggle rounded-standard border border-c-background-light bg-c-background-light p-1 text-c-dark-gray focus-visible:outline-none focus-visible:ring dark:border-c-caption-gray dark:bg-c-dark-gray dark:text-c-background-light"
 >
 	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 		{#if $themeStore.theme === 'dark'}
@@ -76,7 +76,7 @@
 				stroke-linecap="round"
 				stroke-linejoin="round"
 			/>
-		{:else}
+			<!-- {:else}
 			<path
 				in:draw={{ duration: 300 }}
 				d={ICONS[$themeStore.resolvedTheme]}
@@ -85,6 +85,7 @@
 				stroke-linecap="round"
 				stroke-linejoin="round"
 			/>
+		-->
 		{/if}
 	</svg>
 </button>
