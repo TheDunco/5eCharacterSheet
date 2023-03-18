@@ -1,4 +1,6 @@
-const { fontFamily, screens, height, width } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
+const screens = require('./screens.cjs').screens;
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -34,8 +36,7 @@ module.exports = {
             none: '0 0 #0000',
         },
 		screens: {
-			xs: '320px',
-			...screens
+            ...screens,
 		},
 		extend: {
 			fontFamily: {
@@ -57,6 +58,7 @@ module.exports = {
                 'c-caption-gray': '#707070',
                 'c-near-white': '#F9F9F9',
                 'c-near-black': '#1A1A1A',
+                'c-card-light': '#EBEBEB',
             },
 			animation: {
                 'toast-warning': 'fadein-x, fadeout-x',
