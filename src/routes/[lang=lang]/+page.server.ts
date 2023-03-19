@@ -6,9 +6,7 @@ import { PAYLOAD_SECRET } from '$env/static/private';
 const CMS_URL = 'https://payload-character-sheet-production.up.railway.app';
 
 export const load = (async ({ fetch, params }) => {
-	// TODO: Character ID from URL
-	const id = params.characterId;
-	const res = await fetch(`${CMS_URL}/api/fifth-edition-character/${id}`, {
+	const res = await fetch(`${CMS_URL}/api/fifth-edition-character`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${PAYLOAD_SECRET}`
@@ -16,10 +14,10 @@ export const load = (async ({ fetch, params }) => {
 	});
 
 	if (res.ok) {
-		const character = await res.json();
+		const characters = await res.json();
 		return {
 			props: {
-				character
+				characters
 			},
 			appVersion: 'v0.0.1'
 		};

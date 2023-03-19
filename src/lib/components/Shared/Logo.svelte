@@ -1,4 +1,11 @@
-<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg
+	class="tranistion-all duration-200 ease-in-out hover:-rotate-6 hover:opacity-90"
+	width="90"
+	height="90"
+	viewBox="0 0 90 90"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<circle
 		cx="44.1"
 		cy="45"
