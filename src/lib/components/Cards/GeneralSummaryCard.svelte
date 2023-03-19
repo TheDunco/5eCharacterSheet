@@ -51,7 +51,7 @@
 				+{guardValue(character.character.proficiencyBonus)}
 			</LabelValue>
 			<LabelValue label="AC">
-				{guardValue(character.combat.ac || 10)}
+				{guardValue(character.character.armorClass || 10)}
 			</LabelValue>
 			<LabelValue label="Speed">
 				{guardValue(character.character.speed || 30)}
