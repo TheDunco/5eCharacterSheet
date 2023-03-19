@@ -43,7 +43,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl text-c-near-black dark:text-c-background-light">
-						{int.intelligenceScore}
+						{int.intelligenceScore || 10}
 					</span>
 				</span>
 			</div>
@@ -75,7 +75,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl">
-						{wis.wisdomScore}
+						{wis.wisdomScore || 10}
 					</span>
 				</span>
 			</div>
@@ -107,7 +107,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl">
-						{cha.charismaScore}
+						{cha.charismaScore || 10}
 					</span>
 				</span>
 			</div>
@@ -139,7 +139,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl">
-						{dex.dexterityScore}
+						{dex.dexterityScore || 10}
 					</span>
 				</span>
 			</div>
@@ -171,7 +171,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl">
-						{str.strengthScore}
+						{str.strengthScore || 10}
 					</span>
 				</span>
 			</div>
@@ -203,7 +203,7 @@
 				<span class="inline-flex w-full justify-around">
 					<span class="flex items-center text-left text-c-caption-gray">Score</span>
 					<span class="text-xl">
-						{con.constitutionScore}
+						{con.constitutionScore || 10}
 					</span>
 				</span>
 			</div>

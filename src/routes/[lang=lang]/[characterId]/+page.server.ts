@@ -1,13 +1,14 @@
 import { redirect } from '@sveltejs/kit';
-import type { PageServerLoad } from './$types';
-import type { Actions } from './$types';
+import type { PageServerLoad } from '../$types';
+import type { Actions } from '../$types';
 import { PAYLOAD_SECRET } from '$env/static/private';
 
-const CmsUrl = 'https://payload-character-sheet-production.up.railway.app';
+const CMS_URL = 'https://payload-character-sheet-production.up.railway.app';
 
-export const load = (async ({ fetch }) => {
+export const load = (async ({ fetch, params }) => {
 	// TODO: Character ID from URL
-	const res = await fetch(`${CmsUrl}/api/fifth-edition-character/640a6b601da1c697cbb97262`, {
+	const id = params.characterId;
+	const res = await fetch(`${CMS_URL}/api/fifth-edition-character/${id}`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${PAYLOAD_SECRET}`
@@ -19,13 +20,15 @@ export const load = (async ({ fetch }) => {
 		return {
 			props: {
 				character
-			}
+			},
+			appVersion: 'v0.0.1'
 		};
 	}
 
 	return {
 		status: res.status,
-		error: new Error(await res.text())
+		error: new Error(await res.text()),
+		appVersion: 'v0.0.1'
 	};
 }) satisfies PageServerLoad;
 

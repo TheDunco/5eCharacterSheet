@@ -1,6 +1,6 @@
-import type { PageLoad } from './$types';
 import LL, { setLocale } from '$i18n/i18n-svelte';
 import { get } from 'svelte/store';
+import type { PageLoad } from './$types';
 
 export const load = (async ({ parent, data }) => {
 	// wait for `+layout.ts` to load dictionary and pass locale information
@@ -17,7 +17,6 @@ export const load = (async ({ parent, data }) => {
 
 	return {
 		title: $LL.HI(),
-		appVersion: 'v0.0.1',
 		...data
 	};
 }) satisfies PageLoad;

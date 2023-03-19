@@ -61,11 +61,11 @@
 			<LabelValue label="Swim/Fly Speed">
 				<span class="flex flex-row gap-2">
 					<div>
-						{guardValue(character.character.swimSpeed || halfSpeed)}
+						{guardValue(character.character.swimSpeed || halfSpeed)}<span class="text-sm">ft</span>
 					</div>
 					<div class="font-raleway text-c-caption-gray">|</div>
 					<div>
-						{guardValue(character.character.flySpeed || halfSpeed)}
+						{guardValue(character.character.flySpeed || halfSpeed)}<span class="text-sm">ft</span>
 					</div>
 				</span>
 			</LabelValue>
@@ -80,7 +80,7 @@
 			<LabelValue label="Long/High Jump">
 				<span class="flex flex-row gap-2">
 					<div>
-						{strength.strengthScore}<span class="text-sm">ft</span>
+						{strength.strengthScore || 10}<span class="text-sm">ft</span>
 					</div>
 					<div class="font-raleway text-c-caption-gray">|</div>
 					<div>
