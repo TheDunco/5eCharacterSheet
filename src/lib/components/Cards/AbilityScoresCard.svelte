@@ -5,6 +5,7 @@
 	import clsx from 'clsx';
 
 	export let character: FifthEditionCharacter;
+	export let delay: number;
 
 	const int = character.AbilityScoresAndSkills.abilityScores.intelligence;
 	const wis = character.AbilityScoresAndSkills.abilityScores.wisdom;
@@ -14,8 +15,8 @@
 	const con = character.AbilityScoresAndSkills.abilityScores.constitution;
 </script>
 
-<Card title="Ability Scores">
-	<div class="mx-auto grid w-full gap-4 2xs:grid-cols-2 xs:grid-cols-3 xs:gap-12">
+<Card title="Ability Scores" {delay}>
+	<div class="mx-auto grid w-full gap-4 2xs:grid-cols-2 sm:grid-cols-3 sm:gap-12">
 		<div class="mx-auto">
 			<div class="w-28 text-center font-raleway text-xs text-c-caption-gray">Intelligence</div>
 			<div
