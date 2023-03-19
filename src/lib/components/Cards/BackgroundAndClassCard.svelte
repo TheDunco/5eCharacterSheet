@@ -24,14 +24,14 @@
 					.join(' ')}
 			</LabelValue>
 			<LabelValue label="Class">
-				{#each character.character.classes as indivClass}
+				{#each character.character.classes as indivClass, i}
 					<span>
 						<span class="text-c-gold">{guardValue(indivClass.levels)}</span>
-						{guardValue(indivClass.class)}
-						<!-- TODO: And this is not the last element -->
-						{#if character.character.classes.length > 1}
-							,
-						{/if}
+						{`${guardValue(indivClass.class)}${
+							character.character.classes.length > 1 && i < character.character.classes.length - 1
+								? ','
+								: ''
+						}`}
 					</span>
 				{/each}
 			</LabelValue>

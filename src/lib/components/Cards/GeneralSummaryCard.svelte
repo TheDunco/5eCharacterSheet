@@ -26,11 +26,10 @@
 		<span>
 			<span class="font-bold text-c-gold">Level {char.overallLevel}</span>
 			<span class="text-c-caption-gray">{guardValue(char.race || 'Race')}</span>
-			{#each char.classes as indivClass}
+			{#each char.classes as indivClass, i}
 				<span class="text-c-caption-gray">
 					{guardValue(indivClass.class)}
-					<!-- TODO: And this is not the last element -->
-					{#if char.classes.length > 1}
+					{#if char.classes.length > 1 && i < char.classes.length - 1}
 						/
 					{/if}
 				</span>

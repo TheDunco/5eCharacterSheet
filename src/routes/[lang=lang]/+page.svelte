@@ -10,6 +10,14 @@
 
 <h1
 	class="bold mb-6 cursor-default text-center font-cuprum text-6xl text-c-gold hover:-skew-x-2 hover:before:content-['['] hover:after:content-[']']"
+	on:click={() => {
+		window.location.reload();
+	}}
+	on:keydown={(e) => {
+		if (e.key === 'Enter' || e.key === 'R') {
+			window.location.reload();
+		}
+	}}
 >
 	Dashboard
 </h1>
